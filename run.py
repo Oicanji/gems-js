@@ -1,5 +1,11 @@
 import os
 import re
+import jsmin
+from csscompressor import compress
+import argparse
+
+__version__ = '0.0.1'
+version_gems = ''
 
 def run():
     #delete gems.js and gems.css if exists
@@ -24,8 +30,7 @@ def run():
     open('gems.css', 'w').write(css_copiled)
 
     css_copiled = remove_comments(css_copiled)
-    css_copiled = css_copiled.replace(' ', '')
-    css_copiled = css_copiled.replace('\n', '')
+    css_copiled = compress(css_copiled)
 
     #write gems.min.css
     open('gems.min.css', 'w').write(css_copiled)
@@ -41,14 +46,53 @@ def run():
     #write gems.js
     open('gems.js', 'w').write(js_copiled)
 
-    js_copiled = remove_comments(js_copiled)
+    js_copiled = jsmin.jsmin(js_copiled)
     js_copiled = js_copiled.replace('\n', ';')
-    #remove if more caracteres ; if more than 1
-    js_copiled = re.sub(r';+', ';', js_copiled)
 
     #write gems.min.js
     open('gems.min.js', 'w').write(js_copiled)
 
+def new_version():
+    #get version/version.txt
+    version = open('version/version.txt').read()
+    #split version
+    version = version.split('.')
+    #increment version
+    version[3] = str(int(version[3]) + 1)
+    #join version
+    version = '.'.join(version)
+    #write version
+    open('version/version.txt', 'w').write(version)
+    print('New version: ' + version)
+    
+    base_dir = "version"
+    version_dir = os.path.join(base_dir, version)
+
+    if not os.path.exists(base_dir):
+        os.makedirs(base_dir)
+
+    if not os.path.exists(version_dir):
+        os.makedirs(version_dir)
+        print(f"Criada a pasta da versão {version}.")
+    else:
+        print(f"A pasta da versão {version} já existe.")
+    version_gems = version
+    
+def gerateNewVersion():
+    #get version/version.txt
+    version = open('version/version.txt').read()
+    #get files to version paste
+    if os.name == 'posix':
+        files = os.listdir('version/' + version_gems)
+    elif os.name == 'nt':
+        files = os.listdir('version/' + version_gems)
+    #paste files to version folder
+    for file in files:
+        if os.name == 'posix':
+            os.rename('version/' + version_gems + '/' + file, 'version/' + version + '/' + file)
+        elif os.name == 'nt':
+            os.rename('version\\' + version_gems + '\\' + file, 'version\\' + version + '\\' + file)
+    
 
 def remove_comments(string):
     pattern = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|//[^\r\n]*$)"
@@ -65,4 +109,28 @@ def remove_comments(string):
     return regex.sub(_replacer, string)
 
 if __name__ == '__main__':
+    version_enable = False
+    print('')
+    #get if argparse '-n' or '--new-version' is set if not set run()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-n', '--new-version', action='store_true')
+    #get if argparse '-v' or '--version' is set if set print version
+    parser.add_argument('-v', '--version', action='store_true')
+    args = parser.parse_args()
+    if args.version:
+        print(__version__)
+        exit()
+    if args.new_version:
+        print('GENERATING NEW VERSION')
+        new_version()
+        version_enable = True
+    print('\nCOPILE - START')
     run()
+    print('COPILE - DONE')
+    if version_enable:
+        print('\nSAVE VERSION - START')
+        #gerateNewVersion()
+        #NO USE gerateNewVersion() - USE MANUALLY
+        print('SAVE VERSION - DONE')
+
+    print('\nRUN.PY - END - THANKS FOR USE GEMS')
