@@ -1,0 +1,63 @@
+/* background-color in dark mode */
+body.bg-dark .bg-primary {
+    background-color: var(--color-dark-primary);
+}
+body.bg-dark .bg-secondary {
+    background-color: var(--color-dark-secondary);
+}
+body.bg-dark .bg-success {
+    background-color: var(--color-dark-success);
+}
+body.bg-dark .bg-danger {
+    background-color: var(--color-dark-danger);
+}
+body.bg-dark .bg-warning {
+    background-color: var(--color-dark-warning);
+}
+body.bg-dark .bg-info {
+    background-color: var(--color-dark-info);
+}
+body.bg-dark .bg-light {
+    background-color: var(--color-dark);
+}
+body.bg-dark .bg-dark {
+    background-color: var(--color-white);
+}
+body.bg-dark .bg-white {
+    background-color: var(--color-dark);
+}
+body.bg-dark .bg-transparent {
+    background-color: var(--color-transparent);
+}
+
+/* text-color in dark mode*/
+body.bg-dark .text-primary {
+    color: var(--color-dark-primary);
+}
+body.bg-dark .text-secondary {
+    color: var(--color-dark-secondary);
+}
+body.bg-dark .text-success {
+    color: var(--color-dark-success);
+}
+body.bg-dark .text-danger {
+    color: var(--color-dark-danger);
+}
+body.bg-dark .text-warning {
+    color: var(--color-dark-warning);
+}
+body.bg-dark .text-info {
+    color: var(--color-dark-info);
+}
+body.bg-dark .text-light {
+    color: var(--color-dark);
+}
+body.bg-dark .text-dark {
+    color: var(--color-light);
+}
+body.bg-dark .text-white {
+    color: var(--color-black);
+}
+body.bg-dark .text-black {
+    color: var(--color-white);
+}

@@ -1,0 +1,70 @@
+/* utility */
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.bold {
+    font-weight: bold;
+}
+
+/* font */
+.font-xs {
+    font-size: var(--font-xs);
+}
+.font-sm {
+    font-size: var(--font-sm);
+}
+.font-md {
+    font-size: var(--font-md);
+}
+.font-lg {
+    font-size: var(--font-lg);
+}
+.font-xl {
+    font-size: var(--font-xl);
+}
+.font-xxl {
+    font-size: var(--font-xxl);
+}
+h6 {
+    font-size: calc(var(--font-xs)*2);
+}
+h5 {
+    font-size: calc(var(--font-sm)*1.8);
+}
+h4 {
+    font-size: calc(var(--font-md)*1.8);
+}
+h3 {
+    font-size: calc(var(--font-lg)*1.6);
+}
+h2 {
+    font-size: calc(var(--font-xl)*1.4);
+}
+h1 {
+    font-size: calc(var(--font-xxl)*1.2);
+}

@@ -1,0 +1,39 @@
+/* style rules */
+:root{
+    /* colors */
+    --color-primary: #1e90ff;
+    --color-secondary: #ff6347;
+    --color-success: #3cb371;
+    --color-danger: #dc143c;
+    --color-warning: #ff8c00;
+    --color-info: #00bfff;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    --color-white: #fff;
+    --color-transparent: transparent;
+
+
+    /* use in padding and margin etc... */
+    --scale-xs: 0.5rem;
+    --scale-sm: 1.2rem;
+    --scale-md: 1.8rem;
+    --scale-lg: 3.4rem;
+    --scale-xl: 5rem;
+    --scale-xxl: 12rem;
+
+    /* use border */
+    --border-xs: 1px;
+    --border-sm: 3px;
+    --border-md: 5px;
+    --border-lg: 12px;
+    --border-xl: 26px;
+    --border-xxl: 52px;
+
+    /* use in font-size */
+    --font-xs: 0.8rem;
+    --font-sm: 1.2rem;
+    --font-md: 1.8rem;
+    --font-lg: 3.4rem;
+    --font-xl: 5rem;
+    --font-xxl: 12rem;
+}
