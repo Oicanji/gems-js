@@ -2,24 +2,46 @@
 :root{
     /* colors */
     --color-primary: #1e90ff;
+    --color-primary-light: #469ef7;
     --color-secondary: #ff6347;
+    --color-secondary-light: #ec7b67;
     --color-success: #3cb371;
+    --color-success-light: #5dc28b;
     --color-danger: #dc143c;
+    --color-danger-light: #d82e50;
     --color-warning: #ff8c00;
+    --color-warning-light: #fc9f2f;
     --color-info: #00bfff;
-    --color-light: #f8f9fa;
-    --color-dark: #343a40;
+    --color-info-light: #30c7fa;
     --color-white: #fff;
+    --color-black: #000;
     --color-transparent: transparent;
 
+    --color-light: #f8f9fa;
+    /* light variations */
+    --color-light-1: #FCFCFC;
+    --color-light-2: #F9F9F9;
+    --color-light-3: #F2F2F2;
+    --color-light-4: #EDEDED;
+    --color-light-5: #E7E7E7;
+    --color-light-6: #E1E1E1;
+
+    --color-dark: #343a40;
+    /* dark variations */
+    --color-dark-1: #30353B;
+    --color-dark-2: #2B3035;
+    --color-dark-2: #272B30;
+    --color-dark-2: #22262B;
+    --color-dark-2: #1E2125;
+    --color-dark-2: #191C20;
 
     /* use in padding and margin etc... */
-    --scale-xs: 0.5rem;
+    --scale-xs: 0.33rem;
     --scale-sm: 1.2rem;
     --scale-md: 1.8rem;
-    --scale-lg: 3.4rem;
-    --scale-xl: 5rem;
-    --scale-xxl: 12rem;
+    --scale-lg: 2.6rem;
+    --scale-xl: 3rem;
+    --scale-xxl: 8.5rem;
 
     /* use border */
     --border-xs: 1px;
@@ -30,12 +52,12 @@
     --border-xxl: 52px;
 
     /* use in font-size */
-    --font-xs: 0.8rem;
-    --font-sm: 1.2rem;
-    --font-md: 1.8rem;
-    --font-lg: 3.4rem;
-    --font-xl: 5rem;
-    --font-xxl: 12rem;
+    --font-xs: 0.3rem;
+    --font-sm: 0.8rem;
+    --font-md: 1.4rem;
+    --font-lg: 2rem;
+    --font-xl: 3rem;
+    --font-xxl: 5.2rem;
 }/* border */
 .border {
     border: var(--border-xs) solid #000;
@@ -231,6 +253,56 @@
 }
 .text-transparent {
     color: var(--color-transparent);
+}button.gem,
+button.gem-sm,
+button.gem-md,
+button.gem-lg,
+button.gem-xl,
+button.gem-xxl {
+    background-color: var(--color-primary-light);
+    background-image:
+    radial-gradient(
+        circle at top right,
+        var(--color-primary-light),
+        var(--color-light-2) 95%
+    );
+    border-width: 0px;
+    border-radius: 1.5rem;
+    padding: var(--scale-md);
+    font-size: var(--font-lg);
+    color: var(--color-light);
+}
+button.gem-md {
+    padding: var(--scale-md);
+    font-size: var(--font-lg);
+}
+button.gem-lg {
+    padding: var(--scale-lg);
+    font-size: var(--font-xl);
+}
+button.gem-xl {
+    padding: var(--scale-xl);
+    font-size: var(--font-xxl);
+}
+button.gem-xxl {
+    padding: var(--scale-xxl);
+    font-size: var(--font-xxl);
+}
+
+
+.bg-dark button.gem {
+    background-color: var(--color-primary-light);
+    background-image:
+      radial-gradient(
+        circle at top right,
+        var(--color-primary-light),
+        var(--color-dark-2) 90%
+      );
+    border-width: 0px;
+    border-radius: 1.5rem;
+    padding: var(--scale-md);
+    font-size: var(--font-lg);
+    color: var(--color-light);
 }/* margin */
 .mt-1 {
     margin-top: var(--scale-xm);  
@@ -572,6 +644,115 @@ h2 {
 }
 h1 {
     font-size: calc(var(--font-xxl)*1.2);
-}body {
+}
+
+/* shadow */
+.shadow {
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.shadow-sm {
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.shadow-md {
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.shadow-lg {
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.shadow-xl {
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.shadow-raibow{
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+.elevate{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.elevate-plus{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+/* text border */
+.text-border {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.text-border-md {
+    -webkit-text-stroke: 1.8px black;
+}
+.text-border-lg {
+    -webkit-text-stroke: 3px black;
+}
+
+.text-border-primary {
+    text-shadow: -1px 0 var(--color-primary), 0 1px var(--color-primary), 1px 0 var(--color-primary), 0 -1px var(--color-primary);
+}
+.text-border-primary-md {
+    -webkit-text-stroke: 1.8px var(--color-primary);
+}
+.text-border-primary-lg {
+    -webkit-text-stroke: 3px var(--color-primary);
+}
+
+.text-border-secondary {
+    text-shadow: -1px 0 var(--color-secondary), 0 1px var(--color-secondary), 1px 0 var(--color-secondary), 0 -1px var(--color-secondary);
+}
+.text-border-secondary-md {
+    -webkit-text-stroke: 1.8px var(--color-secondary);
+}
+.text-border-secondary-lg {
+    -webkit-text-stroke: 3px var(--color-secondary);
+}
+
+.text-border-success {
+    text-shadow: -1px 0 var(--color-success), 0 1px var(--color-success), 1px 0 var(--color-success), 0 -1px var(--color-success);
+}
+.text-border-success-md {
+    -webkit-text-stroke: 1.8px var(--color-success);
+}
+.text-border-success-lg {
+    -webkit-text-stroke: 3px var(--color-success);
+}
+
+.text-border-danger {
+    text-shadow: -1px 0 var(--color-danger), 0 1px var(--color-danger), 1px 0 var(--color-danger), 0 -1px var(--color-danger);
+}
+.text-border-danger-md {
+    -webkit-text-stroke: 1.8px var(--color-danger);
+}
+.text-border-danger-lg {
+    -webkit-text-stroke: 3px var(--color-danger);
+}
+
+.text-border-warning {
+    text-shadow: -1px 0 var(--color-warning), 0 1px var(--color-warning), 1px 0 var(--color-warning), 0 -1px var(--color-warning);
+}
+.text-border-warning-md {
+    -webkit-text-stroke: 1.8px var(--color-warning);
+}
+.text-border-warning-lg {
+    -webkit-text-stroke: 3px var(--color-warning);
+}
+
+.text-border-info {
+    text-shadow: -1px 0 var(--color-info), 0 1px var(--color-info), 1px 0 var(--color-info), 0 -1px var(--color-info);
+}
+.text-border-info-md {
+    -webkit-text-stroke: 1.8px var(--color-info);
+}
+.text-border-info-lg {
+    -webkit-text-stroke: 3px var(--color-info);
+}
+
+.text-border-light {
+    text-shadow: -1px 0 var(--color-light), 0 1px var(--color-light), 1px 0 var(--color-light), 0 -1px var(--color-light);
+}
+.text-border-light-md {
+    -webkit-text-stroke: 1.8px var(--color-light);
+}
+.text-border-light-lg {
+    -webkit-text-stroke: 3px var(--color-light);
+}
+
+/*https://getcssscan.com/css-buttons-examples?ref=beautifulboxshadow-bottom*/body {
     font-size: var(--font-md);
 }

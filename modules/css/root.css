@@ -2,24 +2,46 @@
 :root{
     /* colors */
     --color-primary: #1e90ff;
+    --color-primary-light: #469ef7;
     --color-secondary: #ff6347;
+    --color-secondary-light: #ec7b67;
     --color-success: #3cb371;
+    --color-success-light: #5dc28b;
     --color-danger: #dc143c;
+    --color-danger-light: #d82e50;
     --color-warning: #ff8c00;
+    --color-warning-light: #fc9f2f;
     --color-info: #00bfff;
-    --color-light: #f8f9fa;
-    --color-dark: #343a40;
+    --color-info-light: #30c7fa;
     --color-white: #fff;
+    --color-black: #000;
     --color-transparent: transparent;
 
+    --color-light: #f8f9fa;
+    /* light variations */
+    --color-light-1: #FCFCFC;
+    --color-light-2: #F9F9F9;
+    --color-light-3: #F2F2F2;
+    --color-light-4: #EDEDED;
+    --color-light-5: #E7E7E7;
+    --color-light-6: #E1E1E1;
+
+    --color-dark: #343a40;
+    /* dark variations */
+    --color-dark-1: #30353B;
+    --color-dark-2: #2B3035;
+    --color-dark-2: #272B30;
+    --color-dark-2: #22262B;
+    --color-dark-2: #1E2125;
+    --color-dark-2: #191C20;
 
     /* use in padding and margin etc... */
-    --scale-xs: 0.5rem;
+    --scale-xs: 0.33rem;
     --scale-sm: 1.2rem;
     --scale-md: 1.8rem;
-    --scale-lg: 3.4rem;
-    --scale-xl: 5rem;
-    --scale-xxl: 12rem;
+    --scale-lg: 2.6rem;
+    --scale-xl: 3rem;
+    --scale-xxl: 8.5rem;
 
     /* use border */
     --border-xs: 1px;
@@ -30,10 +52,10 @@
     --border-xxl: 52px;
 
     /* use in font-size */
-    --font-xs: 0.8rem;
-    --font-sm: 1.2rem;
-    --font-md: 1.8rem;
-    --font-lg: 3.4rem;
-    --font-xl: 5rem;
-    --font-xxl: 12rem;
+    --font-xs: 0.3rem;
+    --font-sm: 0.8rem;
+    --font-md: 1.4rem;
+    --font-lg: 2rem;
+    --font-xl: 3rem;
+    --font-xxl: 5.2rem;
 }

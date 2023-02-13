@@ -1,0 +1,51 @@
+button.gem,
+button.gem-sm,
+button.gem-md,
+button.gem-lg,
+button.gem-xl,
+button.gem-xxl {
+    background-color: var(--color-primary-light);
+    background-image:
+    radial-gradient(
+        circle at top right,
+        var(--color-primary-light),
+        var(--color-light-2) 95%
+    );
+    border-width: 0px;
+    border-radius: 1.5rem;
+    padding: var(--scale-md);
+    font-size: var(--font-lg);
+    color: var(--color-light);
+}
+button.gem-md {
+    padding: var(--scale-md);
+    font-size: var(--font-lg);
+}
+button.gem-lg {
+    padding: var(--scale-lg);
+    font-size: var(--font-xl);
+}
+button.gem-xl {
+    padding: var(--scale-xl);
+    font-size: var(--font-xxl);
+}
+button.gem-xxl {
+    padding: var(--scale-xxl);
+    font-size: var(--font-xxl);
+}
+
+
+.bg-dark button.gem {
+    background-color: var(--color-primary-light);
+    background-image:
+      radial-gradient(
+        circle at top right,
+        var(--color-primary-light),
+        var(--color-dark-2) 90%
+      );
+    border-width: 0px;
+    border-radius: 1.5rem;
+    padding: var(--scale-md);
+    font-size: var(--font-lg);
+    color: var(--color-light);
+}
