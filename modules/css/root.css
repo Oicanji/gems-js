@@ -26,22 +26,26 @@
     --color-light-5: #E7E7E7;
     --color-light-6: #E1E1E1;
 
+    --color-gray: #bebebe;
+
     --color-dark: #343a40;
     /* dark variations */
     --color-dark-1: #30353B;
     --color-dark-2: #2B3035;
-    --color-dark-2: #272B30;
-    --color-dark-2: #22262B;
-    --color-dark-2: #1E2125;
-    --color-dark-2: #191C20;
+    --color-dark-3: #272B30;
+    --color-dark-4: #22262B;
+    --color-dark-5: #1E2125;
+    --color-dark-6: #191C20;
 
     /* use in padding and margin etc... */
     --scale-xs: 0.33rem;
     --scale-sm: 1.2rem;
     --scale-md: 1.8rem;
-    --scale-lg: 2.6rem;
-    --scale-xl: 3rem;
-    --scale-xxl: 8.5rem;
+    --scale-lg: 3rem;
+    --scale-xl: 5rem;
+    --scale-xxl: 7.5rem;
+
+    --scale-x: 11rem;
 
     /* use border */
     --border-xs: 1px;
@@ -51,11 +55,16 @@
     --border-xl: 26px;
     --border-xxl: 52px;
 
+    --border-x: 72px;
+
     /* use in font-size */
     --font-xs: 0.3rem;
     --font-sm: 0.8rem;
     --font-md: 1.4rem;
     --font-lg: 2rem;
-    --font-xl: 3rem;
+    --font-xl: 3.6rem;
     --font-xxl: 5.2rem;
+
+    --font-x: 7.4rem;
+
 }

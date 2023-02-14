@@ -4,34 +4,51 @@ button.gem-md,
 button.gem-lg,
 button.gem-xl,
 button.gem-xxl {
-    background-color: var(--color-primary-light);
-    background-image:
-    radial-gradient(
-        circle at top right,
-        var(--color-primary-light),
-        var(--color-light-2) 95%
-    );
+    background: radial-gradient(circle at 10% 20%, var(--color-light) 40%, var(--color-primary-light) 160%);
+    background-blend-mode:screen;
+    opacity: 0.6;
+
     border-width: 0px;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     padding: var(--scale-md);
     font-size: var(--font-lg);
     color: var(--color-light);
+    transition: all 0.4s ease-in-out;
 }
-button.gem-md {
-    padding: var(--scale-md);
-    font-size: var(--font-lg);
+button[class^='gem'] i,
+button[class^='gem'] p,
+button[class^='gem'] span {
+    text-shadow: -1px 0 var(--color-gray), 0 1px var(--color-gray), 1px 0 var(--color-gray), 0 -1px var(--color-gray);
+}
+
+button[class^='gem']:hover{
+    opacity: 1;
+
+    transition: all 0.4s ease-in-out;
+}
+
+button.gem-sm {
+    padding: var(--scale-sm);
+    font-size: var(--font-md);
+    border-radius: 1.4rem;
 }
 button.gem-lg {
     padding: var(--scale-lg);
     font-size: var(--font-xl);
+
+    border-radius: 3.2rem;
 }
 button.gem-xl {
     padding: var(--scale-xl);
     font-size: var(--font-xxl);
+
+    border-radius: 4.8rem;
 }
 button.gem-xxl {
     padding: var(--scale-xxl);
-    font-size: var(--font-xxl);
+    font-size: var(--font-x);
+
+    border-radius: 6rem;
 }
 
 
